@@ -34,10 +34,10 @@ public class ComparatorRunner {
 			myShapes.add(new Circle("red", 7));
 			myShapes.add(new Circle("red", 15));
 
-
+			ShapeComparator temp = new ShapeComparator();
 			
 			// sort by area using comparable interface / compareTo
-			Collections.sort(myShapes);
+			Collections.sort(myShapes, temp);
 			
 			for (ShapeComparator shape : myShapes) {
 				shape.printShapeComparatorData();

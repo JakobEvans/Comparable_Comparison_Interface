@@ -20,17 +20,19 @@ public class Shape implements Comparable<Shape> {
 	@Override
 	public int compareTo(Shape otherShape) {
 		
-		if(this.Area() == otherShape.Area()) {
-			return 0;
-		}
-		else if(this.Area() > otherShape.Area()) {
-			return 1;
-			
-		}
-		else {
-			return -1;
-			
-		}
+		return (int) (this.Area()-otherShape.Area());
+		
+//		if(this.Area() == otherShape.Area()) {
+//			return 0;
+//		}
+//		else if(this.Area() > otherShape.Area()) {
+//			return 1;
+//			
+//		}
+//		else {
+//			return -1;
+//			
+//		}
 	}
 
 	

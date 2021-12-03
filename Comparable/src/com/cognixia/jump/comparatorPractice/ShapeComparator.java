@@ -4,8 +4,9 @@
 
 package com.cognixia.jump.comparatorPractice;
 
+import java.util.Comparator;
 
-public class ShapeComparator implements Comparable<ShapeComparator> {
+public class ShapeComparator implements Comparator<ShapeComparator> {
 	
 	public Double Area() {
 		System.out.println("I am in the parents area function (ShapeComparator class)");
@@ -15,26 +16,20 @@ public class ShapeComparator implements Comparable<ShapeComparator> {
 	private String color;
 	private String type;
 	
-	
-	
-	// Compare by area to sort by least to greatest area
 	@Override
-	public int compareTo(ShapeComparator otherShapeComparator) {
-		
-		if(this.Area() == otherShapeComparator.Area()) {
+	public int compare(ShapeComparator o1, ShapeComparator o2) {
+		// TODO Auto-generated method stub
+		if(o1.Area() == o2.Area())
 			return 0;
-		}
-		else if(this.Area() > otherShapeComparator.Area()) {
+		else if(o1.Area() > o2.Area()) {
 			return 1;
-			
 		}
 		else {
 			return -1;
-			
 		}
+		
+		
 	}
-
-	
 	
 	
 	
@@ -80,6 +75,8 @@ public class ShapeComparator implements Comparable<ShapeComparator> {
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	
 
 	
 
